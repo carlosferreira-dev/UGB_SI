@@ -1,5 +1,5 @@
 Crie uma Classe PilhaEncadeada.py que deve herdar os elementos de Lista.py e garantir que a Lista funcione como uma Pilha (com os métodos: push, pop e pilhaVazia)
-Crie uma Casse FilaEncadeada.py que deve herdar os elementos de Lista.py e garantir que a Lista funcione como uma Fila (com os métodos: enQueue, deQueue e filaVazia)
+Crie uma Classe FilaEncadeada.py que deve herdar os elementos de Lista.py e garantir que a Lista funcione como uma Fila (com os métodos: enQueue, deQueue e filaVazia)
 Crie um método para determinar a quantidade de elementos presentes em uma lista.
 Crie um método recursivo para mostrar todos os elementos da lista.
 Crie um método recursivo para mostrar todos os elementos da lista de maneira inversa.
