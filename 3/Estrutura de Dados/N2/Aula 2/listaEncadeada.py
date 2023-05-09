@@ -35,7 +35,13 @@ class ListaEncadeada:
         n.setProximo(atu)
 
     def inserenaPosicao(self, n, p):
-        if p > self.getTamanho() and 
+        tamanho = self.getTamanho()
+        ant = self.getCabeca()
+        atu = self.getCabeca().getProximo()
+        if p == atu:
+            ant = self.getCabeca().setProximo(n)
+            atu =  
+
 
     def retiraElemento(self, x):
         ret = None
