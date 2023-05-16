@@ -17,7 +17,7 @@ def new_produto(request):
         form = ProdutoForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('index')
+            return redirect('produto:list_produto')
     else:
         template_name = 'new_produto.html'
         context = {
@@ -31,7 +31,7 @@ def update_produto(request, pk):
         form = ProdutoForm(request.POST, instance=produto)
         if form.is_valid():
             form.save()
-            return redirect('index')
+            return redirect('produto:list_produto')
     else:
         template_name = 'update_produto.html'
         context = {
@@ -43,4 +43,4 @@ def update_produto(request, pk):
 def delete_produto(request, pk):
     produto = Produtos.objects.get(pk=pk)
     produto.delete()
-    return redirect('index')
+    return redirect('produto:list_produto')
