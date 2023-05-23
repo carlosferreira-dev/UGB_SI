@@ -21,7 +21,6 @@ def new_produto(request):
     else:
         template_name = 'new_produto.html'
         forms = ProdutoForm()
-        print(dir(forms))
         context = {
         'form': forms,
         }
