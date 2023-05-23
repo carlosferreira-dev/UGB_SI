@@ -4,6 +4,18 @@
     <form action="{% url 'produto:new_produto' %}"method="POST">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">salvar</button>
+        <p>==========================</p>
+        {% for field in form %}
+            <div class="field">
+                <label class="label">{{ field.label }}</label>
+                <div class="control">
+                {{ field }}
+                </div>
+            </div>
+        {% endfor %}
+        <button class="button is-primary" type="submit">salvar</button>
     </form>
+
+    <input class="input" type="text" placeholder="Text input">
+
 {% endblock %}

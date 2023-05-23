@@ -20,8 +20,10 @@ def new_produto(request):
             return redirect('produto:list_produto')
     else:
         template_name = 'new_produto.html'
+        forms = ProdutoForm()
+        print(dir(forms))
         context = {
-        'form': ProdutoForm(),
+        'form': forms,
         }
         return render(request, template_name, context)
     
