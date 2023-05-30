@@ -29,9 +29,13 @@ def new_entrada(request):
         
 def update_entrada(request, pk):
     entrada = Entradas.objects.get(pk=pk)
+    quantidade = entrada.quantidade
     if request.method == 'POST':
         form = EntradaForm(request.POST, instance=entrada)
         if form.is_valid():
+            form.save(commit=False)
+            form.cleaned_data['produto'].quantidade = form.cleaned_data['produto'].quantidade - quantidade + form.cleaned_data['quantidade']   
+            form.cleaned_data['produto'].save_base()
             form.save()
             return redirect('entrada:list_entrada')
     else:

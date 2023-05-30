@@ -6,8 +6,7 @@ class ProdutoForm(ModelForm):
         fields = ['produto', 'cor', 'descricao']
         widgets = {
             'produto': TextInput(attrs={'class': 'input'}),
-            'cor': Select(attrs={'class': 'select'}),
+            #'cor': Select(attrs={'class': 'select'}),
             'descricao': Textarea(attrs={'class': 'textarea'}),
         }
-
 

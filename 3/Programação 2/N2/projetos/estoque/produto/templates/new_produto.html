@@ -8,9 +8,16 @@
         {% for field in form %}
             <div class="field">
                 <label class="label">{{ field.label }}</label>
-                <div class="control">
-                {{ field }}
-                </div>
+                    {% if field.name == 'cor' %}
+                        <div class="select">
+                        {{ field }}
+                        </div>
+                    {% else %}
+                        <div class="control">
+                        {{ field}}
+                        </div>
+                    {% endif %}
+                    
             </div>
         {% endfor %}
         <button class="button is-primary" type="submit">salvar</button>
