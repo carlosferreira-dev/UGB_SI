@@ -17,6 +17,7 @@ class ArvoreBuscaBinaria:
             self.setRaiz(self.criaNo(v))
         else:
             self.insere(None, self.getRaiz(), v)
+
     def insere(self, pai, atual, v):
         if atual != None:
             if v < atual.getDados().getChave(): # Alteração do elemento
@@ -29,6 +30,7 @@ class ArvoreBuscaBinaria:
                 pai.setFilhoEsquerda(x)
             else:
                 pai.setFilhoDireita(x)
+
     def emOrdem(self, n):
         if n != None:
             self.emOrdem(n.getFilhoEsquerda())
@@ -109,4 +111,4 @@ for i in k:
 #print(arv.qtd_desafio(arv.getRaiz()))
 
 #Exercício 4
-print(arv.soma(arv.getRaiz()))
+#print(arv.soma(arv.getRaiz()))
