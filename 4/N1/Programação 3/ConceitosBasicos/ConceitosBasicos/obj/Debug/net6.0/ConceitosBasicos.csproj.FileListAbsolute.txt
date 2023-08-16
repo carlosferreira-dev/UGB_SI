@@ -1,0 +1,14 @@
+C:\Github\UGB_SI\4\N1\Programação 3\ConceitosBasicos\ConceitosBasicos\bin\Debug\net6.0\ConceitosBasicos.exe
+C:\Github\UGB_SI\4\N1\Programação 3\ConceitosBasicos\ConceitosBasicos\bin\Debug\net6.0\ConceitosBasicos.deps.json
+C:\Github\UGB_SI\4\N1\Programação 3\ConceitosBasicos\ConceitosBasicos\bin\Debug\net6.0\ConceitosBasicos.runtimeconfig.json
+C:\Github\UGB_SI\4\N1\Programação 3\ConceitosBasicos\ConceitosBasicos\bin\Debug\net6.0\ConceitosBasicos.dll
+C:\Github\UGB_SI\4\N1\Programação 3\ConceitosBasicos\ConceitosBasicos\bin\Debug\net6.0\ConceitosBasicos.pdb
+C:\Github\UGB_SI\4\N1\Programação 3\ConceitosBasicos\ConceitosBasicos\obj\Debug\net6.0\ConceitosBasicos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Github\UGB_SI\4\N1\Programação 3\ConceitosBasicos\ConceitosBasicos\obj\Debug\net6.0\ConceitosBasicos.AssemblyInfoInputs.cache
+C:\Github\UGB_SI\4\N1\Programação 3\ConceitosBasicos\ConceitosBasicos\obj\Debug\net6.0\ConceitosBasicos.AssemblyInfo.cs
+C:\Github\UGB_SI\4\N1\Programação 3\ConceitosBasicos\ConceitosBasicos\obj\Debug\net6.0\ConceitosBasicos.csproj.CoreCompileInputs.cache
+C:\Github\UGB_SI\4\N1\Programação 3\ConceitosBasicos\ConceitosBasicos\obj\Debug\net6.0\ConceitosBasicos.dll
+C:\Github\UGB_SI\4\N1\Programação 3\ConceitosBasicos\ConceitosBasicos\obj\Debug\net6.0\refint\ConceitosBasicos.dll
+C:\Github\UGB_SI\4\N1\Programação 3\ConceitosBasicos\ConceitosBasicos\obj\Debug\net6.0\ConceitosBasicos.pdb
+C:\Github\UGB_SI\4\N1\Programação 3\ConceitosBasicos\ConceitosBasicos\obj\Debug\net6.0\ConceitosBasicos.genruntimeconfig.cache
+C:\Github\UGB_SI\4\N1\Programação 3\ConceitosBasicos\ConceitosBasicos\obj\Debug\net6.0\ref\ConceitosBasicos.dll
