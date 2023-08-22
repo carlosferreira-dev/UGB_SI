@@ -12,7 +12,7 @@ Console.WriteLine($"A soma dos números {n1} + {n2} é {result}");
 /*/
 
 double metros = 10.45;
-Console.WriteLine($"A medida de {metros} corresponde a {Conversor.MetrosMilimetros(metros)}");
+Console.WriteLine($"A medida de {metros} corresponde a {Conversor.MetrosMilimetros(metros)} milimetros");
 
 /*/
  * 
