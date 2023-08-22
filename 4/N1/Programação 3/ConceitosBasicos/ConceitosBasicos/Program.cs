@@ -1,13 +1,20 @@
-﻿// See https://aka.ms/new-console-template for more information
-using Microsoft.Win32.SafeHandles;
+﻿using ConceitosBasicos;
 
-Console.WriteLine("Hello, World!");
+int n1 = 20;
+int n2 = 11, result;
+Somador soma;
+soma = new Somador();
+result = soma.Soma(n1, n2);
+Console.WriteLine($"A soma dos números {n1} + {n2} é {result}");
 
-int num1 = 20;
-int num2 = 22;
-int soma = num1 + num2;
-Console.WriteLine($"A soma entre {num1} e {num2} é {soma}");
+/*/
+ * 
+/*/
 
-float pi = 3.141597f;
-decimal salario = 1700000000.00m;
+double metros = 10.45;
+Console.WriteLine($"A medida de {metros} corresponde a {Conversor.MetrosMilimetros(metros)}");
+
+/*/
+ * 
+/*/
 

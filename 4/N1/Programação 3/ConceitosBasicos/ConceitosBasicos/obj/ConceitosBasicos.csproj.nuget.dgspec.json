@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Github\\UGB_SI\\4\\N1\\Programação 3\\ConceitosBasicos\\ConceitosBasicos\\ConceitosBasicos.csproj": {}
+    "C:\\GitHub\\UGB_SI\\4\\N1\\Programação 3\\ConceitosBasicos\\ConceitosBasicos\\ConceitosBasicos.csproj": {}
   },
   "projects": {
-    "C:\\Github\\UGB_SI\\4\\N1\\Programação 3\\ConceitosBasicos\\ConceitosBasicos\\ConceitosBasicos.csproj": {
+    "C:\\GitHub\\UGB_SI\\4\\N1\\Programação 3\\ConceitosBasicos\\ConceitosBasicos\\ConceitosBasicos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Github\\UGB_SI\\4\\N1\\Programação 3\\ConceitosBasicos\\ConceitosBasicos\\ConceitosBasicos.csproj",
+        "projectUniqueName": "C:\\GitHub\\UGB_SI\\4\\N1\\Programação 3\\ConceitosBasicos\\ConceitosBasicos\\ConceitosBasicos.csproj",
         "projectName": "ConceitosBasicos",
-        "projectPath": "C:\\Github\\UGB_SI\\4\\N1\\Programação 3\\ConceitosBasicos\\ConceitosBasicos\\ConceitosBasicos.csproj",
+        "projectPath": "C:\\GitHub\\UGB_SI\\4\\N1\\Programação 3\\ConceitosBasicos\\ConceitosBasicos\\ConceitosBasicos.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Github\\UGB_SI\\4\\N1\\Programação 3\\ConceitosBasicos\\ConceitosBasicos\\obj\\",
+        "outputPath": "C:\\GitHub\\UGB_SI\\4\\N1\\Programação 3\\ConceitosBasicos\\ConceitosBasicos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
