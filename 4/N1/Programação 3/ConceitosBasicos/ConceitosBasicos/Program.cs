@@ -19,7 +19,7 @@ double metros = 10.45;
 Console.WriteLine($"A medida de {metros} corresponde a {Conversor.MetrosMilimetros(metros)} milimetros");
 
 /*/
- * Exercício 
+ * Exercício 14 static
 /*/
 
 double valor_atual = 500.50;
