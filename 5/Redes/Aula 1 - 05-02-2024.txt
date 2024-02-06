@@ -1,0 +1,18 @@
+Instalação do Virtual Box, Cisco packet tracer (FICOU PENDENTE A INSTALAÇÃO DO WINDOWS SERVER NO PC DO TRABALHO, ATIVAR VIRTUALIZAÇÃO NA BIOS)
+
+Download da ISO Windows server 2022, instalado selecionando a opção DESKTOP EXPERIENCE
+
+Explicação sobre AD, DNS, Serviços..
+
+------------------------------------------
+Definir um IP para a maquina (Deixar em bridge o virtual box antes), sem gateway e definindo o dns como o mesmo ip da maquina
+Ativar o AD
+Manage -> Add Roles and Features
+Next
+Role based or feature based installation
+Next
+Selecionar o servidor e Next
+Marcar a opção:
+DNS Server
+Active Directory Domain Services
+Next até install
