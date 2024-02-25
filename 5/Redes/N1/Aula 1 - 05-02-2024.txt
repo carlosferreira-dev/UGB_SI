@@ -1,4 +1,4 @@
-Instalação do Virtual Box, Cisco packet tracer (FICOU PENDENTE A INSTALAÇÃO DO WINDOWS SERVER NO PC DO TRABALHO, ATIVAR VIRTUALIZAÇÃO NA BIOS)
+Instalação do Virtual Box, Cisco packet tracer 
 
 Download da ISO Windows server 2022, instalado selecionando a opção DESKTOP EXPERIENCE
 
