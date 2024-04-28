@@ -1,0 +1,56 @@
+body {
+  color: #333333;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.sacola {
+  background-image: url(../img/sacola.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+  font-size: 14px;
+  text-align: right;
+  width: 140px;
+  padding-right: 35px;
+}
+.menu-opcoes ul {
+  font-size: 15px;
+}
+.menu-opcoes a {
+  color: #003366;
+}
+ul li {
+  display: inline;
+}
+
+.menu-opcoes ul li {
+  display: inline;
+  margin-left: 20px;
+}
+.sacola {
+  padding-top: 8px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 940px;
+}
+
+.logotipo {
+  position: relative;
+  top: 20px;
+  left: 50px;
+}
+
+header {
+  position: relative;
+}
+.menu-opcoes {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.sacola {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
