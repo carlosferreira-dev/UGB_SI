@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="name" type="text" placeholder="Digite o modelo do seu carro">
+    <input id="year" type="text" placeholder="Digite o ano de fabricação">
+    <button id="botaoenviar" type="button">Enviar</button>
+    <p id="texto"></p>
+    <p id="nome"></p>
+    <p id="ano"></p>
+    <p id="demo"></p>
+    <script>
+        function mostraAlerta(){
+            // alert("Funciona");
+            let texto = document.querySelector("#texto");
+            texto.innerHTML = 'Funciona';
+        }
+        var botao = document.querySelector("#botaoenviar");
+        botao.onclick = mostraAlerta;
+        class Car {
+            constructor(name, year) {
+            this.name = name;
+            this.year = year;
+            }
+        age(x) {
+            return x - this.year;
+        }
+        }
+        const date = new Date();
+        let year = date.getFullYear();
+
+        var mycar1 = new Car("gol", 1970)
+        document.querySelector("#nome").innerHTML = mycar1.name;
+        let ano = document.querySelector("#ano");
+            ano.innerHTML = mycar1.year;
+        document.getElementById("demo").innerHTML = "My car is " + mycar1.age(year) + " years old.";
+    </script>
+</body>
+</html>
