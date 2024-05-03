@@ -1,0 +1,293 @@
+drop database bduniv;   // Exclui um banco de dados chamado bduniv, caso exista.
+
+create database bduniv; // Cria um banco de dados chamado bduniv.
+
+use bduniv;		// Torna o banco de dados bduniv acessivel.
+
+create table area
+(are_cod  integer primary key,
+ are_nome varchar(20) not null);
+
+create table curso
+(cur_cod  integer primary key,
+ cur_nome varchar(30) not null,
+ are_cod integer not null,
+ foreign key (are_cod) references area(are_cod));
+
+create table disciplina
+(dis_cod  integer primary key,
+ dis_nome varchar(30) not null);
+
+create table grade
+(cur_cod  integer not null,
+ dis_cod  integer not null,
+ gra_serie integer not null,
+ primary key(cur_cod,dis_cod),
+ foreign key(cur_cod) references curso(cur_cod),
+ foreign key(dis_cod) references disciplina(dis_cod));
+
+create table aluno
+(alu_mat   integer primary key,
+ alu_nome  varchar(35) not null,
+ alu_serie integer not null,
+ alu_dt_mat date not null,
+ alu_genero varchar(1) check(alu_genero in('M','F')),
+ cur_cod   integer not null,
+ foreign key(cur_cod) references curso(cur_cod));
+
+create table aula
+(alu_mat   integer not null,
+ dis_cod   integer not null,
+ primary key(alu_mat,dis_cod),
+ foreign key(alu_mat) references aluno(alu_mat),
+ foreign key(dis_cod) references disciplina(dis_cod));
+
+create table avaliacao
+(alu_mat   integer not null,
+ dis_cod   integer not null,
+ ava_bim   integer check(ava_bim in(1,2)),
+ ava_media numeric(4,1) default 7.0,
+ ava_faltas integer,
+ primary key(alu_mat,dis_cod,ava_bim),
+ foreign key(alu_mat) references aluno(alu_mat),
+ foreign key(dis_cod) references disciplina(dis_cod));
+
+insert into area
+values (1,'Tecnologica');
+insert into area
+values (2,'Saude');
+
+insert into curso
+values (1,'Engenharia Civil',1);
+insert into curso
+values (2,'Engenharia Mecinica',1);
+insert into curso
+values (3,'Medicina',2);
+insert into curso
+values (4,'Enfermagem',2);
+
+insert into disciplina
+values (1,'Matematica I');
+insert into disciplina
+values (2,'Fisica I');
+insert into disciplina
+values (3,'Matematica II');
+insert into disciplina
+values (4,'Fisica II');
+insert into disciplina
+values (5,'Calculo III');
+insert into disciplina
+values (6,'Fisiologia');
+insert into disciplina
+values (7,'Anatomia');
+insert into disciplina
+values (8,'Clinica Geral');
+insert into disciplina
+values (9,'Reumatologia');
+insert into disciplina
+values (10,'Legislacao');
+
+insert into grade
+values(3,6,1);
+insert into grade
+values(3,7,2);
+insert into grade
+values(3,8,2);
+insert into grade
+values(3,9,3);
+insert into grade
+values(4,6,1);
+insert into grade
+values(4,7,2);
+insert into grade
+values(4,10,3);
+insert into grade
+values(1,1,1);
+insert into grade
+values(1,2,1);
+insert into grade
+values(1,3,2);
+insert into grade
+values(1,4,2);
+insert into grade
+values(1,5,3);
+insert into grade
+values(2,1,1);
+insert into grade
+values(2,2,1);
+insert into grade
+values(2,3,2);
+insert into grade
+values(2,4,2);
+insert into grade
+values(2,5,3);
+
+insert into aluno
+values (123,'Jose da Silva',     3,'2018/02/01','M',2);
+insert into aluno
+values (213,'Ana da Silva',      2,'2019/02/01','F',2);
+insert into aluno
+values (231,'Paulo da Silva',    2,'2019/02/02','M',2);
+insert into aluno
+values (312,'Maria da Silva',    1,'2020/02/02','F',2);
+insert into aluno
+values (321,'Joaquim da Silva',  1,'2020/02/03','M',2);
+insert into aluno
+values (322,'Francisco da Silva',1,'2020/02/03','M',2);
+insert into aluno
+values (124,'Antonio da Silva',  3,'2018/02/01','M',1);
+insert into aluno
+values (142,'Felipe da Silva',   3,'2018/02/02','M',1);
+insert into aluno
+values (214,'Claudia da Silva',  2,'2019/02/02','F',1);
+insert into aluno
+values (241,'Pedro da Silva',    2,'2019/02/04','M',1);
+insert into aluno
+values (412,'Vera da Silva',     1,'2020/02/04','F',1);
+insert into aluno
+values (125,'Flavio da Silva',   3,'2018/02/01','M',3);
+insert into aluno
+values (215,'Sergio da Silva',   2,'2019/02/02','M',3);
+insert into aluno
+values (251,'Paula da Silva',    2,'2019/02/04','F',3);
+insert into aluno
+values (512,'Joana da Silva',    1,'2020/02/04','F',3);
+insert into aluno
+values (126,'Julia da Silva',    3,'2018/02/01','F',4);
+insert into aluno
+values (216,'Alfredo da Silva',  2,'2019/02/02','M',4);
+insert into aluno
+values (261,'Mariana da Silva',  2,'2019/02/04','F',4);
+insert into aluno
+values (612,'Gabriel da Silva',  1,'2020/02/04','M',4);
+
+
+insert into aula
+values(123,5);
+insert into aula
+values(213,3);
+insert into aula
+values(213,4);
+insert into aula
+values(231,3);
+insert into aula
+values(312,1);
+insert into aula
+values(321,1);
+insert into aula
+values(321,2);
+insert into aula
+values(322,2);
+insert into aula
+values(124,5);
+insert into aula
+values(142,5);
+insert into aula
+values(214,4);
+insert into aula
+values(241,3);
+insert into aula
+values(412,2);
+insert into aula
+values(412,1);
+insert into aula
+values(125,9);
+insert into aula
+values(215,7);
+insert into aula
+values(251,8);
+insert into aula
+values(512,6);
+insert into aula
+values(126,10);
+insert into aula
+values(216,7);
+insert into aula
+values(261,7);
+insert into aula
+values(612,6);
+
+insert into avaliacao
+values(123,5,1,8.0,3);
+insert into avaliacao
+values(123,5,2,6.0,2);
+insert into avaliacao
+values(213,3,1,4.0,4);
+insert into avaliacao
+values(213,3,2,7.0,2);
+insert into avaliacao
+values(213,4,2,6.0,4);
+insert into avaliacao
+values(231,3,1,9.5,0);
+insert into avaliacao
+values(231,3,2,9.0,0);
+insert into avaliacao
+values(312,1,1,5.0,0);
+insert into avaliacao
+values(312,1,2,7.0,0);
+insert into avaliacao
+values(321,1,1,8.0,0);
+insert into avaliacao
+values(321,1,2,6.5,2);
+insert into avaliacao
+values(321,2,1,5.5,3);
+insert into avaliacao
+values(321,2,2,7.5,4);
+insert into avaliacao
+values(322,2,2,3.5,3);
+insert into avaliacao
+values(124,5,1,3.0,6);
+insert into avaliacao
+values(124,5,2,5.0,5);
+insert into avaliacao
+values(142,5,1,6.0,6);
+insert into avaliacao
+values(142,5,2,5.0,3);
+insert into avaliacao
+values(214,4,1,8.0,1);
+insert into avaliacao
+values(214,4,2,6.0,1);
+insert into avaliacao
+values(241,3,1,1.5,8);
+insert into avaliacao
+values(241,3,2,4.5,6);
+insert into avaliacao
+values(412,2,1,6.5,2);
+insert into avaliacao
+values(412,2,2,6.5,4);
+insert into avaliacao
+values(412,1,1,8.5,2);
+insert into avaliacao
+values(412,1,2,7.5,0);
+insert into avaliacao
+values(125,9,1,5.5,0);
+insert into avaliacao
+values(125,9,2,8.5,0);
+insert into avaliacao
+values(215,7,1,9.0,2);
+insert into avaliacao
+values(215,7,2,10.0,0);
+insert into avaliacao
+values(251,8,1,5.0,2);
+insert into avaliacao
+values(251,8,2,7.0,4);
+insert into avaliacao
+values(512,6,1,3.5,2);
+insert into avaliacao
+values(512,6,2,4.5,4);
+insert into avaliacao
+values(126,10,1,6.0,1);
+insert into avaliacao
+values(126,10,2,10.0,2);
+insert into avaliacao
+values(216,7,1,7.5,3);
+insert into avaliacao
+values(216,7,2,7.0,2);
+insert into avaliacao
+values(261,7,1,9.5,1);
+insert into avaliacao
+values(261,7,2,10.0,1);
+insert into avaliacao
+values(612,6,1,6.5,8);
+insert into avaliacao
+values(612,6,2,5.5,2);
