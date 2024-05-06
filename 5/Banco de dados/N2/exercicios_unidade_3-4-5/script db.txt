@@ -60,7 +60,7 @@ values (2,'Saude');
 insert into curso
 values (1,'Engenharia Civil',1);
 insert into curso
-values (2,'Engenharia Mecinica',1);
+values (2,'Engenharia Mecanica',1);
 insert into curso
 values (3,'Medicina',2);
 insert into curso
