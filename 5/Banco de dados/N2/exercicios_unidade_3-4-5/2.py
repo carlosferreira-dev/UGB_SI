@@ -2,9 +2,7 @@ import sys
 sys.dont_write_bytecode = True
 from db import *
 from tabulate import tabulate
-
 #2 - Obter o nome de todas as disciplinas da 2ª série do curso de MEDICINA.
-
 conn = db_connect()
 cursor = conn.cursor()
 sql = """
