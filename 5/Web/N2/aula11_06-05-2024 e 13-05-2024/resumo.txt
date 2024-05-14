@@ -1,0 +1,12 @@
+JQuery
+$("myButton").hide();
+
+JavaScript
+document.getElementById("myButton").style.display = "none";
+document.getElementById("myButton").style.display = "block";
+
+JQuery
+$("myButton").append("<div id='jogador'></div>")
+
+JavaScript
+document.getElementById("myButton").innerHtml = "<div id='jogador'></div>"
