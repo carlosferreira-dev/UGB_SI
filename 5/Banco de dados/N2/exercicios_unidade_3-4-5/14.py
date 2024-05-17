@@ -15,12 +15,11 @@ JOIN avaliacao av ON (a.alu_mat = av.alu_mat)
 JOIN disciplina d ON (av.dis_cod = d.dis_cod)
 WHERE d.dis_nome = 'Calculo III'
         AND av.ava_bim = 1
-        AND av.ava_media > (SELECT AVG(ava_media)
-                        FROM avaliacao
-                        WHERE ava_bim = 1
-                        AND dis_cod = (SELECT dis_cod
-                                        FROM disciplina
-                                        WHERE dis_nome = 'Calculo III'))
+        AND av.ava_media > (SELECT AVG(av.ava_media)
+                        FROM avaliacao av
+                        JOIN disciplina d ON (av.dis_cod = d.dis_cod)
+                        WHERE av.ava_bim = 1
+                        AND d.dis_nome = 'Calculo III')
 """
 cursor.execute(sql)
 rows = cursor.fetchall()

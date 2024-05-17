@@ -8,13 +8,16 @@ cursor = conn.cursor()
 sql = """
 SELECT a.alu_mat,
         a.alu_nome,
-        av.ava_media
+        AVG(av.ava_media)
 FROM aluno a
 JOIN avaliacao av ON (a.alu_mat = av.alu_mat)
 JOIN disciplina d ON (av.dis_cod = d.dis_cod)
 WHERE d.dis_nome = 'Calculo III'
 GROUP BY a.alu_mat
-HAVING av.ava_media > AVG(av.ava_media)
+HAVING AVG(av.ava_media) > (SELECT AVG(ava_media)
+                                FROM avaliacao av
+                                JOIN disciplina d ON (av.dis_cod = d.dis_cod)
+                                WHERE dis_nome = 'Calculo III')
 """
 cursor.execute(sql)
 rows = cursor.fetchall()

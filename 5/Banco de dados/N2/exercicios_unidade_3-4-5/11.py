@@ -6,13 +6,13 @@ from tabulate import tabulate
 conn = db_connect()
 cursor = conn.cursor()
 sql = """
-SELECT a.alu_mat,
-        a.alu_nome,
-        av.ava_bim
-FROM aluno a
-LEFT JOIN avaliacao av ON (a.alu_mat = av.alu_mat)
-WHERE av.ava_bim != 1
-GROUP BY a.alu_mat
+SELECT alu_mat,
+        alu_nome
+FROM aluno
+WHERE alu_mat NOT IN (SELECT alu_mat 
+                                FROM
+                                avaliacao
+                                WHERE ava_bim = 1)
 """
 cursor.execute(sql)
 rows = cursor.fetchall()

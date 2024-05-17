@@ -11,12 +11,10 @@ SELECT a.alu_mat,
         a.alu_nome
 FROM aluno a
 JOIN curso c ON (a.cur_cod = c.cur_cod)
-JOIN grade g ON (a.cur_cod = g.cur_cod)
-JOIN disciplina d ON (d.dis_cod = g.dis_cod)
-JOIN area a ON (a.are_cod = c.are_cod)
 JOIN avaliacao av ON (a.alu_mat = av.alu_mat)
+JOIN disciplina d ON (d.dis_cod = av.dis_cod)
 WHERE c.cur_nome = 'Enfermagem'
-    AND g.gra_serie = 1
+    AND a.alu_serie = 1
     AND av.ava_media >= 5.0 AND av.ava_media <= 7.0
     AND av.ava_bim = 1
     AND d.dis_nome = 'Fisiologia'
