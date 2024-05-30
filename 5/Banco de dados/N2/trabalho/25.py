@@ -10,6 +10,11 @@ SELECT mdc_nome
 FROM medicamento
 WHERE mdc_cod NOT IN (SELECT mdc_cod FROM efeito_colateral);
 """
+# sql = """
+# SELECT mdc_nome
+# FROM medicamento
+# WHERE mdc_cod NOT IN (SELECT mdc_cod FROM contra_indicacao);
+# """
 cursor.execute(sql)
 conn.commit()
 rows = cursor.fetchall()
