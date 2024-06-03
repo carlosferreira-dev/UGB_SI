@@ -6,7 +6,7 @@ from tabulate import tabulate
 conn = db_connect()
 cursor = conn.cursor()
 sql = """
-SELECT m.mdc_nome
+SELECT DISTINCT(m.mdc_nome)
 FROM medicamento m
 JOIN efeito_colateral e ON (m.mdc_cod = e.mdc_cod)
 JOIN sintoma s ON (s.sin_cod = e.sin_cod)
