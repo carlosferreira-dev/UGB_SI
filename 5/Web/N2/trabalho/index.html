@@ -1,23 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resgate</title>
+    <title>F1 Game</title>
+    <link rel="shortcut icon" type="imagex/png" href="./imgs/icone.png">
     <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
-<div id="container">
-  <div id="fundoGame">
-    <div id="inicio" onclick="start()">
-      <h1>Resgate</h1>
-      <p>Utilize a tecla W para movimentar o helicóptero para cima, 
-        a tecla S para baixo e a tecla D para atirar </p>
-      <p>Clique aqui para iniciar!!!</p>
+    <div id="container">
+        <div id="fundoGame">
+            <div id="inicio" onclick="start()">
+                <h1>F1 Game</h1>
+                <p>Aperte W para ir para cima, S para ir para baixo e D para atirar</p>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-<script src="js/jquery-3.7.1.min.js"></script>
-<script src="js/js.js"></script>
+<!-- Sons do jogo !-->
+<audio src="sons/somDisparo.wav" preload="auto" id="somDisparo"></audio>
+<audio src="sons/somExplosao.wav" preload="auto" id="somExplosao"></audio>
+<audio src="sons/musica.wav" preload="auto" id="musica"></audio>
+<audio src="sons/somGameover.wav" preload="auto" id="somGameover"></audio>
+<audio src="sons/somPerdido.wav" preload="auto" id="somPerdido"></audio>
+<audio src="sons/somResgate.wav" preload="auto" id="somResgate"></audio>
+<audio src="sons/somHit.wav" preload="auto" id="somHit"></audio>
 </body>
+<script src="js/jquery-3.6.4.min.js"></script>
+<script src="js/js.js"></script>
+<script src="js/jquery-collision.min.js"></script>
 </html>
